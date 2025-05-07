@@ -464,7 +464,7 @@ class LetterGradePercentageCap(Policy):
     
     def _apply(self, gs, selected_evaluations=None):
         if selected_evaluations is None:
-            selected_evaluations = LetterGradePercentageCap._DEFAULT_SELECTED_EVALUATIONS
+            selected_evaluations = self._DEFAULT_SELECTED_EVALUATIONS
         if len(selected_evaluations) != len(self.output_fields):
             raise ValueError('The number of selected evaluations ({}) must match the number of output fields ({}).'.format(len(selected_evaluations), len(self.output_fields)))
         for evaluation in selected_evaluations:
